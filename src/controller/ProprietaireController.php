@@ -296,7 +296,10 @@ class ProprietaireController extends Controller{
 
     public function fullDetails($id){
 
-        return $this->view->load("Proprietaire/fullDetails");
+        $ownerDetails = $this->proprio->editRecord($id);
+
+
+        return $this->view->load("Proprietaire/fullDetails", $ownerDetails);
     }
 }
 
