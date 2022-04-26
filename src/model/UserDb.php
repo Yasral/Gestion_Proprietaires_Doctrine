@@ -21,6 +21,21 @@
 
         public function login($username, $password){
 
+            $query = $this->entityManager->createQuery("SELECT u FROM User u WHERE u.username = :username");
+
+            $query->setParameter('username', $username);
+
+            $singleUser = $query->getSingleResult();
+
+            $hashedPassword = $singleUser->getPassword();
+
+            if(password_verify($password, $hashedPassword)){
+                echo "The login model is a masterPiece";
+                echo "<br>";
+                return $singleUser;
+            }else{
+                return false;
+            }
         }
 
         public function findUserByEmail($email){
