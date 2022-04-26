@@ -268,3 +268,46 @@ main.active{
     font-size: 0.8rem;
     border-radius: 15px;
 }
+
+/* Styling the main home content */
+.main-title, .main-title + h3{
+    text-align: center;
+}
+
+.main-title, .main-title + h3, .title-form, .details, .button input{
+    font-weight: 200;
+}
+
+.main-title{
+    padding-top: 60px;
+}
+
+.main-title + h3{
+    padding-top: 30px;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.images span img{
+    width: 192px;
+    height: 192px;
+}
+
+.banner{
+    padding: 220px 10px;
+}
+
+.slots-content h5{
+    font-size: 14px;
+    padding-top: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
