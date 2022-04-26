@@ -4,5 +4,5 @@
 
 <?php 
     define("APPROOT", dirname(dirname(__FILE__)));
-    define("URLROOT", "http://localhost/doctrine");
+    define("URLROOT", "http://localhost/doctrineProprietaire");
 ?>
