@@ -454,3 +454,55 @@ body{
 .detail-table tr td{
     width: 30%;
 }
+
+/* Handling the responsivity */
+@media screen and (max-width: 584px) {
+    .container-form{
+        max-width: 100%;
+    }
+
+    .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .category{
+        width: 100%;
+    }
+
+    .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar{
+        width: 5px;
+    }
+}
+
+@media(max-width: 459px){
+    .category{
+        flex-direction: column;
+    }
+}
+
+
+/* Responsive design for the dashboard */
+@media (max-width: 1000px){
+    .navigation{
+        left: -300px;
+    }
+
+    .navigation.active{
+        width: 300px;
+        left: 0;
+    }
+
+    main{
+        width: 100%;
+        left: 0;
+    }
+
+    main.active{
+        left: 300px;
+    }
