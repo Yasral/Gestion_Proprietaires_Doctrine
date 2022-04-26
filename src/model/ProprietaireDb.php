@@ -7,6 +7,21 @@ class ProprietaireDb extends Model{
 
     public function add($proprietaire){
 
+        $this->entityManager->persist($proprietaire);
+
+        $this->entityManager->flush();
+
+        if($this->entityManager->flush()){
+            // echo "We saved the house owner";
+            // return true;
+            echo "We didn't save the house owner";
+            return false;
+        }else{
+            // echo "We didn't save the house owner";
+            // return false;
+            echo "We saved the house owner";
+            return true;
+        }
     }
 
     public function findAll(){

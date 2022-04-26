@@ -124,9 +124,9 @@ class ProprietaireController extends Controller{
                if($this->proprio->add($proprietaire)){
                   echo "Everything is allright";
                   header("location: http://localhost/doctrine/proprietaire/all");
-               }else{
+                }else{
                   die("Une erreur s'est produite");
-               }
+                }
    
             }
    
