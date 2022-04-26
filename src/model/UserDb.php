@@ -40,6 +40,19 @@
 
         public function findUserByEmail($email){
 
+            $query = $this->entityManager->createQuery("SELECT u FROM User u WHERE u.email_user = :email_user");
+    
+            $query.setParameter(email_user, $email);
+    
+            $singleUser = $query.getSingleResult();
+
+            // We have to check later the value returned by an empty array
+            
+            if($singleUser){
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 
