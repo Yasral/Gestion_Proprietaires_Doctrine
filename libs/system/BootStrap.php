@@ -62,7 +62,7 @@ class BootStrap
             }
         }elseif(!isset($_GET["url"])) {
       
-        //   header("location: http://localhost/doctrineProprietaire/proprietaire/index");
+          header("location: http://localhost/doctrineProprietaire/proprietaire/index");
             
         }
     }
