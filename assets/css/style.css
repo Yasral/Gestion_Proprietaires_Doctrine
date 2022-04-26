@@ -127,3 +127,68 @@ a{
 .title{
     font-size: 12px;
 }
+
+/* Styling the main content */
+main{
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+}
+
+.topbar{
+    padding:10px 30px;
+}
+
+.toogle{
+    width: 30px;
+    height: 30px; 
+    font-size: 2.5rem;
+}
+
+.navigation li:hover, .toogle, .user:hover, .card, .crud-buttons button, .crud-buttons a{
+    cursor: pointer;
+}
+
+.search{
+    position: relative;
+    width: 400px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 40px;
+    padding: 5px 50px;
+    outline: none;
+    border: 1px solid var(--white);  
+}
+
+.search label ion-icon{
+    position: absolute;
+    left: 20px;
+    font-size: 1rem;
+}
+
+.menu-content{
+    display: none;
+    transition: 0.5s all ease;
+}
+
+/* Js Toggle */
+.navigation.active{
+    width: 80px;
+}
+
+main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+    transition: 0.5s all ease;
+}
