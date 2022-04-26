@@ -100,7 +100,74 @@
 
         public function login(){
 
-            return $this->view->load("User/login");
+            $data = [
+                "username" => "",
+                "email_user" => "",
+                "password" => "",
+                "confirmPassword" => "",
+                "usernameError" => "",
+                "email_userError" => "",
+                "passwordError" => "",
+                "confirmPasswordError" => "",
+            ];
+
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                
+                $data = [
+                    "username" => trim($_POST['username']),
+                    "email_user" => trim($_POST['email_user']),
+                    "password" => trim($_POST['password']),
+                    "confirmPassword" => trim($_POST['confirmPassword']),
+                    "usernameError" => "",
+                    "email_userError" => "",
+                    "passwordError" => "",
+                    "confirmPasswordError" => "",
+                ];
+
+                if(empty($data["username"])){
+                    $data["usernameError"] = "Entrez un nom d'utilisateur";
+                }
+
+                if(empty($data["password"])){
+                    $data["passwordError"] = "Entrez un mot de passe";
+                }
+
+                if(empty($data["usernameError"]) && empty($data["passwordError"])){
+                    $administrator = new User();
+                    $administrator->setUsername($data['username']);
+                    $administrator->setEmailUser($data['email_user']);
+                    $administrator->setPassword($data['password']);
+
+                    $loggedInUser = $this->admin->login($data['username'], $data['password']);
+
+                    if($loggedInUser){
+
+                        $this->createUserSession($loggedInUser);
+    
+                    }else{
+
+                        $data['passwordError'] = 'Mot de passe ou Identifiant incorrect. Veuillez reessayer svp.';
+
+                        return $this->view->load("User/login", $data);
+                    }
+                }
+            }
+            else{
+                $data = [
+                    "username" => "",
+                    "email_user" => "",
+                    "password" => "",
+                    "confirmPassword" => "",
+                    "usernameError" => "",
+                    "email_userError" => "",
+                    "passwordError" => "",
+                    "confirmPasswordError" => "",
+                ];
+            }
+
+            return $this->view->load("User/login", $data);
         }
 
         public function createUserSession($user){
