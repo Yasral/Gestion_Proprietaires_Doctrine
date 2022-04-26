@@ -137,10 +137,29 @@ class ProprietaireController extends Controller{
 
     public function all(){
 
+        $listStack = $this->proprio->findAll();
+
         return $this->view->load("Proprietaire/all");
     }
 
     public function delete($id){
+
+        $findOwner = $this->proprio->editRecord($id);
+
+        if(!isLoggedIn() || ($findOwner->getIdUser() != $_SESSION["id_user"])){
+
+            header("location: http://localhost/doctrine/user/login");
+
+        }else{
+        
+            if($this->proprio->deleteRecord($id)){
+                echo "Everything is allright";
+                header("location: http://localhost/doctrine/Proprietaire/all");
+            }else{
+
+                die("Une erreur s'est produite");
+            }
+        }
 
         return $this->view->load("Proprietaire/delete");
     }
