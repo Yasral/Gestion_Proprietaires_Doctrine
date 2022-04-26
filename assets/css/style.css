@@ -422,3 +422,35 @@ body{
     transition: 0.20s ease-in;
     text-decoration: none;
 }
+
+/* Styling the general errors */
+.invalidFeedback{
+    color: var(--cherryRed);
+    display: block;
+}
+
+/* Styling the hidden input  */
+.hidden-input{
+    display: none;
+}
+
+/* .input-checkbox .details + input{
+    display: inline-block;
+    margin-bottom: 30px;
+} */
+
+/* Styling the owner details table*/
+
+.detail-descriptions{
+    padding: 3rem 0;
+}
+
+.detail-table tr th{
+    width: 70%;
+    padding-left: 5%;
+    text-transform: uppercase;
+}
+
+.detail-table tr td{
+    width: 30%;
+}
