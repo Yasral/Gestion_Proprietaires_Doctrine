@@ -50,10 +50,20 @@ class ProprietaireDb extends Model{
 
     public function editRecord($id){
 
+        $findOwner = $this->entityManager->find("Proprietaire", $id);
+
+        return $findOwner;
     }
 
     public function editRecordBis(){
         
+        if($this->entityManager->flush()){
+            echo "We haven't updated the owner";
+            return false;
+        }else{
+            echo "We updated the owner successfully";
+            return true;
+        }
     }
 }
 
