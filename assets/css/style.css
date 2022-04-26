@@ -248,3 +248,23 @@ main.active{
 .table-link-padding{
     padding: 0.3125rem;
 }
+
+/* Styling the CRUD part */
+
+.listes{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+}
+
+.cardHeader > h2, .nom h3, .prenom h4, .lieu_naissance h5, .crud-buttons button, .crud-buttons a, .content-table thead tr, .content-table th, .content-table td, .detail-table th{
+    font-weight: 300;
+}
+
+.crud-buttons button, .crud-buttons a{
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+}
