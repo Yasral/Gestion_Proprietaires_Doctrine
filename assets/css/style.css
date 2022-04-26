@@ -44,3 +44,86 @@ body{
 .navigation ul, .navigation ul li, .navigation ul li a, .topbar, .toogle, .search label, .card, .crud-buttons, .slots-content, .content-table, .content-table thead, .content-table tbody, .content-table tr, .user-details, .category, .category label, .detail-table tr{
     display: flex;
 }
+
+.navigation ul{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.navigation li a, .navigation ul, .toogle, .search label{
+    align-items: center;
+}
+
+.topbar, .card, .crud-buttons{
+    justify-content: space-between;
+}
+
+/* Styling the navigation */
+.container{
+    background-color: var(--orange);
+    position: relative;
+}
+
+.container, .navigation li{
+    width: 100%;
+}
+
+.navigation{
+    position: fixed;
+    width: 300px;
+    left: 0;
+    height: 100%;
+    border-left: 10px solid var(--peach);
+    transition: 0.5s all ease;
+    overflow: hidden;
+}
+
+.navigation ul{
+    list-style-type: none;
+    height: 100%;
+}
+
+.navigation, .navigation ul{
+    background-color: var(--lightBlue);
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    display: block;
+    padding: 5px 0;
+    pointer-events: none;
+}
+
+.toogle, .slots-content{
+    justify-content: center;
+}
+
+.navigation li a{
+    padding: 20px 0;
+    color: #000;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.navigation li:hover a{
+    color: var(--white);
+}
+
+.navigation li:hover{
+    background-color: var(--peach);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.icon{
+    margin-right: 10px;
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+
+.title{
+    font-size: 12px;
+}
