@@ -26,10 +26,26 @@ class ProprietaireDb extends Model{
 
     public function findAll(){
 
+        $query = $this->entityManager->createQuery("SELECT p FROM Proprietaire p");
+
+        $list = $query->getResult();
+
+        return $list;
     }
 
     public function deleteRecord($id){
 
+        $findProprio = $this->entityManager->find("Proprietaire", $id);
+
+        $this->entityManager->remove($findProprio);
+
+        if($this->entityManager->flush()){
+            echo "We haven't delete the owner";
+            return false;
+        }else{
+            echo "We delete the owner successfully";
+            return true;
+        }
     }
 
     public function editRecord($id){
