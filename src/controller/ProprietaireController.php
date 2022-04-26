@@ -14,7 +14,7 @@ class ProprietaireController extends Controller{
 
     public function add(){
 
-        return $this->view->load("Proprietaire/add", $data);
+        return $this->view->load("Proprietaire/add");
     }
 
     public function all(){
