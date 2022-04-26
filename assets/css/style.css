@@ -390,3 +390,35 @@ body{
 .input-box input:hover, .input-box input:focus, .input-box:valid{
     border-color: #1B1A17;
 }
+
+/* Styling the registration button */
+
+.button{
+    background-color: pink;
+    height: 45px;
+    margin: 30px 0;
+}
+
+.button input:hover{
+    cursor: pointer;
+}
+
+.button input{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background: linear-gradient(132deg, rgba(230,213,184,1) 85%, rgba(255,154,141,1) 100%);
+    border: none;
+}
+
+/* Styling the form registration and account creation */
+.options a {
+    color: var(--navy);
+}
+
+.options a:hover {
+    color: var(--sienna);
+    transition: 0.20s ease-in;
+    text-decoration: none;
+}
