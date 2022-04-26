@@ -192,3 +192,59 @@ main.active{
     left: 80px;
     transition: 0.5s all ease;
 }
+
+/* Styling the tables */
+
+.content-table, .detail-table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: 3rem 1rem;
+    border-radius: 0.3125rem 0.3125rem 0 0;
+    overflow: hidden;
+}
+
+.content-table, .content-table thead, .content-table tbody, .detail-table{
+    flex-direction: column;
+}
+
+.content-table tr, .detail-table tr{
+    justify-content: space-between;
+}
+
+.content-table tr td, .content-table tr th, .detail-table{
+    width: 100%;
+}
+
+.content-table thead tr, .detail-table th, .detail-table td{
+    background-color: var(--lightBlue);
+    color: var(--black);
+    text-align: left;
+    /* font-weight: bold; */
+}
+
+.content-table th, .content-table td, .detail-table tr, .detail-table th, .detail-table td{
+    padding: 0.9375rem 0.75rem;
+}
+
+.content-table tbody tr{
+    border-bottom: 0.0625rem solid var(--lightgray);
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: var(--minilightgray);
+}
+
+.content-table span ion-icon{
+    font-size: 1rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-link-padding{
+    padding: 0.3125rem;
+}
