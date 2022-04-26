@@ -8,3 +8,30 @@
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
+
+:root{
+    
+    /* Fourth Combo */
+    --pine: #1d3c45;
+    --lightBlue: #aed6dc;
+    --lightpink: #ff9a8d;
+    --orange: #d2601a;
+    --peach: #fff1e1;
+
+    /* Form Combo */
+    --navy: #26495c;
+    --ochre: #c4a35a;
+    --sienna: #c66b3d;
+    --grey: #e5e5dc;
+    --lightGrey: #E6D5B8;
+    --greenShade: #006400;
+    --black: #000;
+
+    /* Tables style */
+    --greenish: #009879;
+    --lightgray: #ddd;
+    --minilightgray: #f3f3f3;
+    --cherryRed: #990f02;
+    --scarletRed: #900D09;
+    --currantRed: #680C07;
+}
