@@ -10,7 +10,7 @@
 }
 
 :root{
-    
+
     /* Fourth Combo */
     --pine: #1d3c45;
     --lightBlue: #aed6dc;
@@ -34,4 +34,13 @@
     --cherryRed: #990f02;
     --scarletRed: #900D09;
     --currantRed: #680C07;
+}
+
+body{
+    background-color: var(--peach);
+}
+
+/* Flex territory */
+.navigation ul, .navigation ul li, .navigation ul li a, .topbar, .toogle, .search label, .card, .crud-buttons, .slots-content, .content-table, .content-table thead, .content-table tbody, .content-table tr, .user-details, .category, .category label, .detail-table tr{
+    display: flex;
 }
