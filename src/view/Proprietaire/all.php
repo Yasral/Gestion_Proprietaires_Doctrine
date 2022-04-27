@@ -46,20 +46,23 @@
                                                     <ion-icon name="eye-outline"></ion-icon>
                                                 </span>
                                             </a>
-                                            <a class="table-link-padding" href="<?php echo URLROOT . "/Proprietaire/edit/" . $liste->getCode_proprietaire() ?>">
-                                                <span>
-                                                    <ion-icon name="refresh-outline"></ion-icon>
-                                                </span>
-                                            </a>
-                                            <!-- <form action="" method="POST"> -->
-                                                <!-- <input type="submit" value="Supprimer"> -->
-
-                                                <a class="table-link-padding" href="<?php echo URLROOT . "/Proprietaire/delete/" . $liste->getCode_proprietaire() ?>">
+                                            <!-- Some test -->
+                                            <?php if(isset($_SESSION['id_user']) && ($_SESSION['id_user'] == $liste->getIdUser()) ) : ?>
+                                                <a class="table-link-padding" href="<?php echo URLROOT . "/Proprietaire/edit/" . $liste->getCode_proprietaire() ?>">
                                                     <span>
-                                                        <ion-icon name="trash-outline"></ion-icon>
+                                                        <ion-icon name="refresh-outline"></ion-icon>
                                                     </span>
                                                 </a>
-                                            <!-- </form> -->
+                                                <!-- <form action="" method="POST"> -->
+                                                    <!-- <input type="submit" value="Supprimer"> -->
+
+                                                    <a class="table-link-padding" href="<?php echo URLROOT . "/Proprietaire/delete/" . $liste->getCode_proprietaire() ?>">
+                                                        <span>
+                                                            <ion-icon name="trash-outline"></ion-icon>
+                                                        </span>
+                                                    </a>
+                                                <!-- </form> -->
+                                            <?php endif; ?> 
                                         </td>
                                     </tr>
                                 </tbody>

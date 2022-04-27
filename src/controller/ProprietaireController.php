@@ -20,7 +20,7 @@ class ProprietaireController extends Controller{
     public function add(){
 
         if(!isLoggedIn()){
-            header("location: http://localhost/doctrine/proprietaire/index");
+            header("location: http://localhost/doctrineProprietaire/proprietaire/index");
          }
    
          $data = [
@@ -123,7 +123,7 @@ class ProprietaireController extends Controller{
    
                if($this->proprio->add($proprietaire)){
                   echo "Everything is allright";
-                  header("location: http://localhost/doctrine/proprietaire/all");
+                  header("location: http://localhost/doctrineProprietaire/proprietaire/all");
                 }else{
                   die("Une erreur s'est produite");
                 }
@@ -148,13 +148,13 @@ class ProprietaireController extends Controller{
 
         if(!isLoggedIn() || ($findOwner->getIdUser() != $_SESSION["id_user"])){
 
-            header("location: http://localhost/doctrine/user/login");
+            header("location: http://localhost/doctrineProprietaire/user/login");
 
         }else{
         
             if($this->proprio->deleteRecord($id)){
                 echo "Everything is allright";
-                header("location: http://localhost/doctrine/Proprietaire/all");
+                header("location: http://localhost/doctrineProprietaire/Proprietaire/all");
             }else{
 
                 die("Une erreur s'est produite");
@@ -171,7 +171,7 @@ class ProprietaireController extends Controller{
       // Here we have to link the User table to the Owner table to enable edition and deletion
 
          if(!isLoggedIn() || ($findOwner->getIdUser() != $_SESSION["id_user"])){
-            header("location: http://localhost/doctrine/user/login");
+            header("location: http://localhost/doctrineProprietaire/user/login");
          }
 
       // Here we have to link the User table to the Owner table to enable edition and deletion
@@ -282,7 +282,7 @@ class ProprietaireController extends Controller{
             if($this->proprio->editRecordBis()){
                echo "Sound Good enough";
 
-               header("location: http://localhost/doctrine/Proprietaire/all");
+               header("location: http://localhost/doctrineProprietaire/Proprietaire/all");
             }else{
 
                die("Une erreur s'est produite");

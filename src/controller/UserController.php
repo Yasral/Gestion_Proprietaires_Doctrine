@@ -87,7 +87,7 @@
                     // Trying to register a new user
                     if($this->admin->registerUser($administrator)){
                         echo "New user saved";
-                        header("location: http://localhost/doctrine/User/login");
+                        header("location: http://localhost/doctrineProprietaire/User/login");
                     }else{
                         die("Une erreur s'est produite");
                     }
@@ -176,14 +176,14 @@
             $_SESSION['username'] = $user->getUsername();
             $_SESSION['email_user'] = $user->getEmailUser();
 
-            header("location: http://localhost/doctrine/Proprietaire/index");
+            header("location: http://localhost/doctrineProprietaire/Proprietaire/index");
         }
 
         public function logout(){
             unset($_SESSION['id_user']);
             unset($_SESSION['username']);
             unset($_SESSION['email_user']);
-            header("location: http://localhost/doctrine/User/login");
+            header("location: http://localhost/doctrineProprietaire/User/login");
         }
     }
 
